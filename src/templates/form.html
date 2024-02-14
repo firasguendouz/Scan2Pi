@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Wi-Fi Credentials</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Submit Wi-Fi Credentials</h1>
+        <form action="{{ url_for('submit_wifi_credentials') }}" method="post">
+            <label for="ssid">Wi-Fi SSID:</label>
+            <input type="text" id="ssid" name="ssid" required>
+            <label for="password">Wi-Fi Password:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
